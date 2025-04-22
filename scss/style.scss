@@ -1,0 +1,11 @@
+/*Archivo principal SASS. Aquí se importan todos los parciales del proyecto en orden*/
+
+// Abstracts (variables y mixins)
+@import "abstracts/variables";
+@import "abstracts/mixin";
+
+// Base (reset, tipografías, helpers)
+@import "base/reset";
+
+// Pages (estilos específicos por página)
+@import "pages/home";

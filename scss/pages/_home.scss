@@ -1,0 +1,114 @@
+// Estilos del header
+header {
+    @include flex-between;
+    padding: 10px 30px;
+    background-color: $color-header;
+    color: white;
+  
+    .logo-container img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  
+    nav {
+      ul {
+        @include flex;
+        gap: 7px;
+        list-style: none;
+  
+        li {
+          a {
+            color: $color-texto;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-weight: bold;
+  
+            &:hover {
+              color: $color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  
+    h1, h2 {
+      text-align: center;
+      color: $color-titulo;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    section {
+      img {
+        display: block;
+        width: 50%;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+    }
+  }
+  @include mobile {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  
+      li a {
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  
+    main section img {
+      width: 90%;
+    }
+  }
+  
+  @include tablet {
+    .logo-container img {
+      width: 150px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  }
+  
+  footer {
+    text-align: right;
+    background-color: $color-header;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+  .producto-container {
+    @include flex-center;
+    gap: 20px;
+    flex-wrap: wrap;
+  
+    img {
+      width: 30%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  

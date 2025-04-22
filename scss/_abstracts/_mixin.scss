@@ -1,0 +1,32 @@
+/* Mixins reutilizables para mantener el código limpio y evitar repetición, como flexbox y media queries */
+/*Mixin para alinear con flexbox*/
+@mixin flex {
+    display: flex;
+    align-items: center;
+  }
+  //Mixin para layout entre elementos
+  @mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  //Mixin responsive para móvil
+  @mixin mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 993px) {
+      @content;
+    }
+  }
+  
+  
